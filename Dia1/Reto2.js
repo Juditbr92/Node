@@ -6,28 +6,20 @@
 var fs = require('fs');
 
 let newObject = {
-    name: 'Pepe',
-    surname: 'Garcia',
+    name: 'Judit',
+    surname: 'Bardón',
     age: 31
 }
 
-var JSONstring = JSON.stringify(newObject);
-
-fs.writeFile("nuevo2.json", JSONstring, function (err) {
-    if (err) {
-        console.log(err);
-    }else {
-        console.log("Archivo creado correctamente")
-    }
+fs.writeFile('test.json', JSON.stringify(newObject), () => {
+    console.log("El archivo se ha creado correctamente")
+    fs.readFile('test.json', 'utf-8', (error, res) => {
+        if(error){
+            console.log(error);
+        } else {
+            console.log(JSON.parse(res));
+        }
+    })
 });
 
-const route = 'nuevo2.json';
 
-fs.readFile(route, 'utf8', (err, data) => {
-    if(err){
-        console.log("Error al leer el archivo");
-    } else{
-        const JSONstring = JSON.parse(data);
-        console.log("Objeto leido correctamente", JSONstring)
-    }
-})
