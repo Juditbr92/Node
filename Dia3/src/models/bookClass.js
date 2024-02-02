@@ -5,15 +5,14 @@ export class Book{
     type;
     author;
     price;
-    photo;
+    
 
-    constructor(id_book, id_user, title, type, author, price, photo){
+    constructor(id_book, id_user, title, type, author, price){
         this.id_book = id_book;
         this.id_user = id_user;
         this.title = title;
         this.type = type;
         this.author = author;
         this.price = price;
-        this.photo = photo;
     }
 }
