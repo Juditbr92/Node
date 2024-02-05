@@ -1,18 +1,8 @@
 export class Book{
-    id_book;
-    id_user;
-    title;
-    type;
-    author;
-    price;
-    
 
-    constructor(id_book, id_user, title, type, author, price){
-        this.id_book = id_book;
-        this.id_user = id_user;
+    constructor(id, title, author){
+        this.id = id;
         this.title = title;
-        this.type = type;
         this.author = author;
-        this.price = price;
     }
 }
