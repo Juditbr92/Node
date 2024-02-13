@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokemon</title>
+</head>
+
+<body>
+    <div class="bigContainer">
+        <div class="leftContainer">
+            <div class="mb-3">
+                <label for="name" class="form-label nameLabel">Nombre del Pokemon:</label>
+                <input type="text" class="form-control name" id="name" placeholder="Escribe aquí...">
+            </div>
+            <div class="mb-3">
+                <button class="btn" type="button" id="buscar">Buscar</button>
+            </div>
+        </div>
+
+        <div class="rightContainer">
+            <div class="card" style="width: 18rem;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Pok%C3%A9ball.png" id="img" class="card-img-top"
+                    alt="Imagen de Pokeball">
+                <div class="card-body">
+                    <h5 class="card-title" id="nameAnswer">Encuentra a tu Pokemon</h5>
+                    <p>Habilidades:</p>
+                    <p class="card-text" id="abilities"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type = module src="pokemon.js"></script>
+</html>
